@@ -27,8 +27,7 @@ var app = http.createServer(function handle(req, res) {
     res.writeHead(404);
     return res.end('page not found.');
   }
-  return fs.readFile(filePath, 'utf-8',
-  function (err, data) {
+  return fs.readFile(filePath, 'utf-8', function (err, data) {
     if (err) {
       console.log(err);
       res.writeHead(500);
